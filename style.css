@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+body {
+    font-family: 'Space Mono', monospace;
+
+    --text: #fafafa;
+    --background: #050505;
+    --primary: #23CE6B;
+    --secondary: #062d24;
+    --accent: #85ff66;
+
+    --warning: #ff3535;
+    --warning-background: #3f0c0c;
+
+    color: var(--text);
+    background-color: var(--background);
+}
+
+/* SIDENAV */
+
+#sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--background);
+    border-right: 2px solid var(--secondary);
+    overflow-x: hidden;
+    padding-top: 8px;
+}
+
+#sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--text);
+    display: block;
+    transition: 0.2s;
+}
+
+#sidenav a:hover {
+    color: var(--accent);
+    transition: 0.2s;
+}
+
+.main {
+    margin-left: 192px;
+    /* Same as the width of the sidenav + 32px */
+    font-size: 28px;
+    /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    #sidenav {
+        padding-top: 15px;
+    }
+
+    #sidenav a {
+        font-size: 18px;
+    }
+}
+
+/* HEADER */
+
+#utils-header {
+    color: var(--primary);
+}
+
+#top h1 {
+    margin: 0px;
+}
+
+#top button {
+    width: 40px;
+    height: 40px;
+    border: none;
+
+    text-align: center;
+    line-height: 40px;
+}
+
+#top .saved {
+    color: var(--primary)
+}
+
+#top .not-saved {
+    color: var(--text)
+}
+
+#top {
+    margin: 32px 0px;
+}
+
+#version {
+    font-size: 16px;
+    margin: 0px;
+
+    color: #535353;
+}
+
+#home-header {
+    margin-bottom: 0px;
+}
+
+/* TOOL PREVIEW */
+
+.tool-preview {
+    border-radius: 16px;
+
+    background-color: var(--secondary);
+
+    margin: 32px;
+    padding: 0px 16px;
+}
+
+.tool-preview p {
+    font-size: 20px;
+}
+
+.tool-type {
+    border-radius: 4px;
+
+    background-color: var(--background);
+
+    padding: 1px 5px;
+
+    font-size: 16px;
+
+    color: var(--text);
+}
+
+a {
+    color: var(--text);
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+a:hover {
+    color: var(--accent);
+
+    transition: 0.2s;
+}
+
+/* CONVERSIONS */
+
+input,
+select,
+button {
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+
+    background-color: var(--secondary);
+
+    color: var(--text);
+
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+}
+
+#swap {
+    width: 37px;
+    height: 37px;
+
+    text-align: center;
+    line-height: 37px;
+}
+
+/* LISTS */
+
+ul {
+    list-style: none;
+}
+
+/* SETTINGS */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    opacity: 0;
+    width: 310px;
+    color: var(--text);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 16px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: calc(310px / 2);
+
+    transition: opacity 0.1s;
+}
+
+.tooltip:hover .tooltiptext {
+    opacity: 1;
+}
+
+.regular {
+    border: 1px solid var(--primary);
+    background-color: var(--secondary);
+}
+
+.danger {
+    border: 1px solid var(--warning);
+    background-color: var(--warning-background);
+}
