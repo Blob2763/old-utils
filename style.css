@@ -197,7 +197,7 @@ ul {
     z-index: 1;
     bottom: 100%;
     left: 50%;
-    margin-left: calc(310px / 2);
+    margin-left: calc(310px / -2);
 
     transition: opacity 0.1s;
 }
