@@ -1,5 +1,5 @@
 const data = {
-    "temperature": {
+    "TEMPERATURE": {
         "heading": "TEMPERATURE",
         "category": "CONVERSIONS",
         "dropdown": [
@@ -8,7 +8,7 @@ const data = {
             {"value": "kelvin", "label": "K",},
         ]
     },
-    "distance": {
+    "DISTANCE": {
         "heading": "LENGTH",
         "category": "CONVERSIONS",
         "dropdown": [

@@ -4,19 +4,19 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-
-    <script src="navbar.js"></script>
-    <script src="tools.js"></script>
 </head>
 
-<body onload="populateNavbar(); populateToolList()">
+<body onload="populateNavbar(); populateToolList(); generateList();">
 
     <div id="sidenav"></div>
 
     <div class="main">
         <h1><span id="utils-header">TOOLS</span></h1>
-        <div id="tools">
 
+        <input id="search-bar" placeholder="search for tools..."></input>
+
+        <div id="tools">
+            <p>LOADING...</p>
         </div>
         <h2>COMING SOON</h2>
         <h3>CONVERSIONS</h3>
@@ -40,6 +40,10 @@
             <li><a>QR CODE</a></li>
         </ul>
     </div>
+
+    <script src="navbar.js"></script>
+    <script src="tools.js"></script>
+    <script src="toolsList.js"></script>
 
 </body>
 
