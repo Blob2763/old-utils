@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="navbar.js"></script>
-    <script src="tools/save.js"></script>
+    <script src="tools/save.js" defer></script>
+    <script src="settings.js" defer></script>
 </head>
 
 <body onload="populateNavbar()">
@@ -17,9 +18,8 @@
         <h1><span id="utils-header">SETTINGS</span></h1>
         <h3>GENERAL</h3>
         <ul>
-            <div class="tooltip">
-                <li>COLOUR SCHEMES</li>
-                <span class="tooltiptext regular">this feature doesn't exist yet</span>
+            <div class="tooltip" id="colorSchemeText">
+                <li class="settingsText">COLOUR SCHEMES</li>
             </div>
         </ul>
 
@@ -38,6 +38,30 @@
                 <span class="tooltiptext danger">clears all save data</span>
             </div>
         </ul>
+
+        <dialog id="colorSchemeModal" class="modal">
+            <span style="font-size: 40px;">Colour Scheme</span>
+
+            <div class="modalMain">
+                <span class="text">Dark Mode</span>
+                <label class="toggle">
+                  <input type="checkbox" checked id="darkModeCheck">
+                  <span class="slider"></span>
+                </label>
+
+                <br>
+
+                <label>
+                  <span style="font-size: 21px;">Default color</span>
+                  <input type="text">
+                </label>
+            </div>
+
+            <form method="dialog">
+                <button class="modalButton">x</button>
+            </form>
+
+        </dialog>
     </div>
 
 </body>
