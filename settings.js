@@ -3,7 +3,8 @@ const colorSchemeText = document.getElementById('colorSchemeText');
 
 const darkModeCheckbox = document.getElementById('darkModeCheck')
 
-colorSchemeText.addEventListener('click', function() {
+colorSchemeText.addEventListener('click', function(e) {
+    e.preventDefault();
     colorScheme.showModal();
 })
 
