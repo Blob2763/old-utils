@@ -44,8 +44,10 @@ function getAllSaved() {
     let saved = [];
 
     for (tool in saveData) {
-        if (checkSave(tool)) {
-            saved.push(tool);
+        if (tool !== "settings") {
+            if (checkSave(tool)) {
+                saved.push(tool);
+            }    
         }
     }
     console.log(saved);
